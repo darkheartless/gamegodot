@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://troll.tscn" type="PackedScene" id=1]
+[ext_resource path="res://NavigationTest/NavigationTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/LineEdit.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Game.gd" type="Script" id=4]
+
+[node name="Game" type="Node2D" groups=["game1"]]
+script = ExtResource( 4 )
+
+[node name="Player1Pos" type="Marker2D" parent="."]
+position = Vector2( 817, 406 )
+scale = Vector2( 1.76606, 1.81633 )
+
+[node name="Player2Pos" type="Marker2D" parent="."]
+position = Vector2( 249, 442 )
+scale = Vector2( 1.76606, 1.81633 )
+
+[node name="NavigationTest" parent="." instance=ExtResource( 2 )]
+
+[node name="Troll" parent="." instance=ExtResource( 1 )]
+position = Vector2( 100, 150 )
+
+[node name="LineEdit" type="LineEdit" parent="Troll"]
+offset_left = -455.0
+offset_top = 243.0
+offset_right = -250.0
+offset_bottom = 274.0
+expand_to_text_length = true
+clear_button_enabled = true
+caret_blink = true
+script = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Troll/LineEdit"]
+offset_left = 346.0
+offset_top = -422.0
+offset_right = 531.0
+offset_bottom = -390.0
+
+[node name="Timer" type="Timer" parent="Troll/LineEdit/RichTextLabel"]
+
+[node name="chat_history" type="RichTextLabel" parent="Troll/LineEdit"]
+offset_left = -10.0
+offset_top = -57.0
+offset_right = 208.0
+offset_bottom = -3.0
+
+[connection signal="text_submitted" from="Troll/LineEdit" to="Troll/LineEdit" method="_on_LineEdit_text_entered"]
+[connection signal="gui_input" from="Troll/LineEdit/RichTextLabel" to="Troll/LineEdit" method="_on_RichtextLabel_gui_input"]

@@ -1,0 +1,183 @@
+[gd_scene load_steps=23 format=3 uid="uid://d3h08j7dw4mrf"]
+
+[ext_resource type="Script" path="res://Scenes/NavigationTest/LineEdit.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/Character/Character.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://biksy0px06sy5" path="res://chatbubble2.png" id="3"]
+[ext_resource type="Script" path="res://Scenes/NavigationTest/NavigationTest.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://c61qgj37s3xop" path="res://testtile4 (1).png" id="5"]
+[ext_resource type="Texture2D" uid="uid://k4bdjdagjcm8" path="res://chatbubble3.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://chn8ats854ko2" path="res://chatbubble1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cq6f5yi0d5hos" path="res://New Project.png" id="8"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_asjrw"]
+vertices = PackedVector2Array(-191, -68, -128, -99, -65, -68, -128, -36)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_la7kg"]
+vertices = PackedVector2Array(191, -68, 128, -99, 65, -68, 128, -36)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_mr5xq"]
+vertices = PackedVector2Array(-191, 68, -128, 99, -65, 68, -128, 36)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kd5fh"]
+vertices = PackedVector2Array(191, 68, 128, 99, 65, 68, 128, 36)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7ct4g"]
+vertices = PackedVector2Array(-68, -191, -99, -128, -68, -65, -36, -128)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_62cqk"]
+vertices = PackedVector2Array(68, -191, 99, -128, 68, -65, 36, -128)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4re0e"]
+vertices = PackedVector2Array(-68, 191, -99, 128, -68, 65, -36, 128)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_5t716"]
+vertices = PackedVector2Array(68, 191, 99, 128, 68, 65, 36, 128)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uywpy"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(256, 140)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_asjrw")
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/1/navigation_layer_0/polygon = SubResource("NavigationPolygon_la7kg")
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/navigation_layer_0/polygon = SubResource("NavigationPolygon_mr5xq")
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/3/navigation_layer_0/polygon = SubResource("NavigationPolygon_kd5fh")
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/4/navigation_layer_0/polygon = SubResource("NavigationPolygon_7ct4g")
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/5/navigation_layer_0/polygon = SubResource("NavigationPolygon_62cqk")
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/6/navigation_layer_0/polygon = SubResource("NavigationPolygon_4re0e")
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+0:0/7/navigation_layer_0/polygon = SubResource("NavigationPolygon_5t716")
+
+[sub_resource type="CompressedTexture2D" id="4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dlbk"]
+texture = SubResource("4")
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSet" id="2"]
+tile_size = Vector2i(256, 140)
+navigation_layer_0/layers = 1
+sources/0 = SubResource("TileSetAtlasSource_uywpy")
+sources/1 = SubResource("TileSetAtlasSource_3dlbk")
+
+[sub_resource type="NavigationPolygon" id="3"]
+vertices = PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, 2, 0, -29, 63, 2, 0, 34)])
+
+[sub_resource type="SpriteFrames" id="5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="NavigationTest" type="Node2D"]
+script = ExtResource("4")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("2")
+format = 2
+
+[node name="Testtile4(1)" type="Sprite2D" parent="TileMap"]
+position = Vector2(63, 82)
+texture = ExtResource("5")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="TileMap/Testtile4(1)"]
+navigation_polygon = SubResource("3")
+
+[node name="Character" parent="." instance=ExtResource("2")]
+position = Vector2(-371, -93)
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+position = Vector2(-2, -100)
+
+[node name="LineEdit" type="LineEdit" parent="Character"]
+offset_left = -481.0
+offset_top = 143.0
+offset_right = -243.0
+offset_bottom = 179.0
+script = ExtResource("1")
+
+[node name="chat_display" type="RichTextLabel" parent="Character/LineEdit"]
+layout_mode = 0
+anchor_left = 1.5084
+anchor_top = -12.0556
+anchor_right = 2.56723
+anchor_bottom = -11.3889
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="Character/LineEdit/chat_display"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Character/LineEdit/chat_display"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="NewProject" type="Sprite2D" parent="Character/LineEdit/chat_display/VBoxContainer"]
+light_mask = 6
+position = Vector2(-60, -25)
+scale = Vector2(0.170313, 0.127083)
+texture = ExtResource("8")
+centered = false
+
+[node name="chat_history" type="RichTextLabel" parent="Character/LineEdit"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -55.0
+offset_right = 241.0
+offset_bottom = -1.0
+
+[node name="animatechat" type="AnimatedSprite2D" parent="Character"]
+position = Vector2(51, -246)
+sprite_frames = SubResource("5")
+frame = 1
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[connection signal="text_submitted" from="Character/LineEdit" to="Character/LineEdit" method="_on_LineEdit_text_entered"]
+[connection signal="gui_input" from="Character/LineEdit/chat_display" to="Character/LineEdit" method="_on_RichTextLabel_gui_input"]
